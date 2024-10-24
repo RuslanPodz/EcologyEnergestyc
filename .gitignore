@@ -1,0 +1,3 @@
+node_modules
+eslint --ignore-pattern .gitignore --ext .js,.jsx --max-warnings 0 ./src
+
