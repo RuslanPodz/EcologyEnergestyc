@@ -1,4 +1,4 @@
 #!/bin/sh
-npm run lint
+. "$(dirname "$0")/_/husky.sh"
 
-echo "Pre commit works!"
+npx eslint .
