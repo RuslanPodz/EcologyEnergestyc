@@ -1,4 +1,3 @@
-// .eslintrc.js
 module.exports = {
     env: {
         browser: true,  // Включає браузерні глобальні змінні
@@ -6,49 +5,42 @@ module.exports = {
         node: true,     // Включає Node.js глобальні змінні
     },
     extends: [
-        'eslint:recommended',                // Рекомендовані правила ESLint
-        'plugin:react/recommended',          // Рекомендовані правила для React
-        'plugin:react-hooks/recommended',    // Рекомендовані правила для хуків React
-        'plugin:import/errors',              // Правила для імпортів
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:import/errors',
         'plugin:import/warnings',
-        'plugin:unicorn/recommended',        // Рекомендовані правила для плагіна Unicorn
-        'plugin:cypress/recommended',        // Рекомендовані правила для Cypress
+        'plugin:unicorn/recommended',
+        'plugin:cypress/recommended',
     ],
     settings: {
         react: {
-            version: 'detect',               // Автоматичне визначення версії React
+            version: 'detect',
         },
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx'],  // Розширення файлів для імпортів
+                extensions: ['.js', '.jsx'],
             },
         },
     },
     plugins: [
-        'react',                             // Плагін для React
-        'simple-import-sort',                // Плагін для сортування імпортів
+        'react',
+        'simple-import-sort',
     ],
     rules: {
-        'react/react-in-jsx-scope': 'off',   // React не потрібно в імпорті, якщо використовується в нових версіях
-        'simple-import-sort/imports': 'error', // Сортування імпортів
-        'simple-import-sort/exports': 'error', // Сортування експортів
-        'import/first': 'error',              // Імпорти повинні бути першими
-        'import/newline-after-import': 'error', // Порожній рядок після імпортів
-        'unicorn/filename-case': [
-            'error',
-            {
-                cases: {
-                    camelCase: true,
-                    pascalCase: true,
-                },
-            },
-        ],
+        'react/react-in-jsx-scope': 'off',
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
+        'import/first': 'error',
+        'import/newline-after-import': 'error',
+        'unicorn/filename-case': 'off', // Вимкнення правила camelCase
+        'unicorn/prefer-module': 'off', // Вимкнення правила для використання module
     },
     overrides: [
         {
-            files: ['*rc.js', '*.config.js'], // Налаштування для специфічних файлів
+            files: ['*rc.js', '*.config.js'],
             rules: {
-                'unicorn/prefer-module': 'off', // Вимкнення деяких правил для конфігураційних файлів
+                'unicorn/prefer-module': 'off',
                 'unicorn/filename-case': 'off',
             },
         },
