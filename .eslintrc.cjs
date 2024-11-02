@@ -1,8 +1,8 @@
 module.exports = {
     env: {
-        browser: true,  // Включає браузерні глобальні змінні
-        es2021: true,   // Використовує ES2021
-        node: true,     // Включає Node.js глобальні змінні
+        browser: true,  
+        es2021: true,   
+        node: true,     
     },
     extends: [
         'eslint:recommended',
@@ -33,8 +33,8 @@ module.exports = {
         'simple-import-sort/exports': 'error',
         'import/first': 'error',
         'import/newline-after-import': 'error',
-        'unicorn/filename-case': 'off', // Вимкнення правила camelCase
-        'unicorn/prefer-module': 'off', // Вимкнення правила для використання module
+        'unicorn/filename-case': 'off',
+        'unicorn/prefer-module': 'off',
     },
     overrides: [
         {
@@ -46,6 +46,6 @@ module.exports = {
         },
     ],
     globals: {
-        Cypress: true, // Дозволити глобальні змінні Cypress
+        Cypress: true,
     },
 };
