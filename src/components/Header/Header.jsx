@@ -32,21 +32,21 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.navbar}>
-      <div className={styles.navbarLogo}>EcologyEnergestyc</div>
-      <div className={styles.menuIconContainer} onClick={toggleMenu}>
-        <div className={`${styles.burgerIcon} ${isOpen ? styles.open : ''}`}></div>
+    <div className={styles.navbar} data-testid="header">
+      <div className={styles.navbarLogo} data-testid="logo">EcologyEnergestyc</div>
+      <div className={styles.menuIconContainer} onClick={toggleMenu} data-testid="menu-icon">
+        <div className={`${styles.burgerIcon} ${isOpen ? styles.open : ''}`} data-testid="burger-icon"></div>
       </div>
-      <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
-        <Link to={isAboutPage ? '/home' : '/aboutUs'} className={styles.link}>
+      <div className={`${styles.menu} ${isOpen ? styles.open : ''}`} data-testid="menu">
+        <Link to={isAboutPage ? '/home' : '/aboutUs'} className={styles.link} data-testid="about-link">
           {isAboutPage ? 'Home' : 'About us'}
         </Link>
-        <a href="#social-media" className={styles.link}>Social Media</a>
-        <a href="#support" className={styles.link}>Support</a>
-        <Link to={isSettingPage ? '/home' : '/setting'} className={styles.link}>
+        <a href="#social-media" className={styles.link} data-testid="social-media-link">Social Media</a>
+        <a href="#support" className={styles.link} data-testid="support-link">Support</a>
+        <Link to={isSettingPage ? '/home' : '/setting'} className={styles.link} data-testid="settings-link">
           {isSettingPage ? 'Home' : 'Setting'}
         </Link>
-        <button onClick={handleLogout} className={styles.logOut}>
+        <button onClick={handleLogout} className={styles.logOut} data-testid="logout-button">
           LogOut
         </button>
       </div>

@@ -4,8 +4,8 @@ import styles from "./AboutUs.modules.css";
 
 const AboutUs = () => {
   return (
-    <div className={styles.app}>
-      <section className={styles.header}>
+    <div className={styles.app} data-testid="about-us">
+      <section className={styles.header} data-testid="about-us-header">
         <div className={styles.headerContent}>
           <div className={styles.headerImage}></div>
           <div className={styles.textContent}>
@@ -40,7 +40,7 @@ const AboutUs = () => {
       </section>
       <div className={styles.fullWidthBackground}></div>
 
-      <section className={styles.goal}>
+      <section className={styles.goal} data-testid="floating-solar-panel-system">
         <h2>Floating Solar Panel System</h2>
         <div className={styles.photo}></div>
         <div className={styles.floating}></div>
@@ -52,7 +52,7 @@ const AboutUs = () => {
           in and take a closer look at this technology.
         </p>
       </section>
-      <section>
+      <section data-testid="how-do-floating-solar-panels-work">
         <div className={styles.information}>
           <h2>How Do Floating Solar Panels Work?</h2>
           <p>

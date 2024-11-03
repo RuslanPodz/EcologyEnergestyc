@@ -19,6 +19,7 @@ export const SingUpForm = () => {
   function register(event) {
     event.preventDefault();
     if (copyPassword !== password) {
+        console.log("Passwords do not match")
       return;
     }
 
@@ -58,6 +59,8 @@ export const SingUpForm = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 required
+                data-testid="Password"
+
               />
               <span className={styles.icon} onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
@@ -70,6 +73,7 @@ export const SingUpForm = () => {
                 type={showCopyPassword ? "text" : "password"}
                 placeholder="Confirm password"
                 required
+                data-testid="Confirm password"
               />
               <span className={styles.icon} onClick={() => setShowCopyPassword(!showCopyPassword)}>
                 {showCopyPassword ? <FaEye /> : <FaEyeSlash />}
